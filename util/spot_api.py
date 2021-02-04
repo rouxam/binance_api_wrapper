@@ -89,7 +89,7 @@ class Spot_Api():
         try:
             ret = self.__client.get_historical_klines(**args)
         except Exception as err: # pylint: disable=broad-except
-            err_msg = f"`order_market_sell()` failed: {str(err)}"
+            err_msg = f"`get_historical_klines()` failed: {str(err)}"
             self.__log.warning(err_msg)
             ret = []
         return ret
